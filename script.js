@@ -2,8 +2,22 @@ function copyToClipboard(elementId) {
   var copyText = document.getElementById(elementId);
   copyText.select();
   document.execCommand("copy");
+  console.log("Copiado pelo botão: " + copyText.value);
 }
 
+function copyOnClick(event) {
+  var copyText = event.target;
+  copyText.select();
+  document.execCommand("copy");
+  console.log("Copiado com clique: " + copyText.value);
+}
+
+function copyOnFocus(elementId) {
+  var copyText = document.getElementById(elementId);
+  copyText.select();
+  document.execCommand("copy");
+  console.log("Copiado com foco: " + copyText.value);
+}
 
 function populateDropdown() {
   console.log(document.getElementById('Caminho').value);
@@ -36,3 +50,9 @@ function populateDropdown() {
 window.onload = function() {
     populateDropdown();
 }
+
+const inputs = document.querySelectorAll('input[type="text"]'); 
+
+inputs.forEach(input => {
+  input.addEventListener('click', copyOnClick);
+});
