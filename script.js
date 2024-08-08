@@ -56,3 +56,32 @@ const inputs = document.querySelectorAll('input[type="text"]');
 inputs.forEach(input => {
   input.addEventListener('click', copyOnClick);
 });
+
+
+
+// Popup Confirmação Transferência
+function showPopup() {
+  let opTransf = document.getElementById('ListaTransf').value;
+  console.log(opTransf);
+
+  if (opTransf != "") {
+    const result = confirm("Realmente deseja transferir para " + opTransf + "?");
+    if (result) {
+      executarFuncao();
+    }
+  }
+  else {
+    alert("Nenhuma opção selecionada.");
+  }
+}
+
+function executarFuncao() {
+  let opTransf = document.getElementById('ListaTransf').value;
+  console.log('Função executada!');
+  alert("Transferido para " + opTransf);
+  // Adicionar logica transferencia.
+}
+
+document.getElementById('openConfirmation').addEventListener('click', showPopup);
+
+
