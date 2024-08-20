@@ -58,7 +58,6 @@ inputs.forEach(input => {
 });
 
 
-
 // Popup Confirmação Transferência
 function showPopup() {
   let opTransf = document.getElementById('ListaTransf').value;
@@ -78,10 +77,13 @@ function showPopup() {
 function executarFuncao() {
   let opTransf = document.getElementById('ListaTransf').value;
   console.log('Função executada!');
-  alert("Transferido para " + opTransf);
+  // alert("Transferido para " + opTransf);
   // Adicionar logica transferencia.
 }
 
 document.getElementById('openConfirmation').addEventListener('click', showPopup);
 
+document.getElementById("btnPesquisa").addEventListener("click", function() {
+  this.value = "pesquisa";
+});
 
