@@ -79,9 +79,11 @@ function executarFuncao() {
   console.log('Função executada!');
   // alert("Transferido para " + opTransf);
   // Adicionar logica transferencia.
+  document.getElementById('openConfirmation').value = "transf";
 }
 
 document.getElementById('openConfirmation').addEventListener('click', showPopup);
+
 
 document.getElementById("btnPesquisa").addEventListener("click", function() {
   this.value = "pesquisa";
