@@ -129,8 +129,7 @@ document.getElementById("btnPesquisa").addEventListener("click", function() {
   this.value = "pesquisa";
 });
 
-// Não exibir própria skill de transferencia
-document.addEventListener('DOMContentLoaded', function() {
+window.onload = function() {
   const skillValue = document.getElementById('SkillT').value;
   const select = document.getElementById('ListaTransf');
   const options = select.querySelectorAll('option');
@@ -142,4 +141,4 @@ document.addEventListener('DOMContentLoaded', function() {
           option.style.display = '';
       }
   });
-});
+};
