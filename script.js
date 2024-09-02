@@ -80,37 +80,37 @@ window.onload = function () {
 
   switch (skillOrigem) {
     case "20868525":
-      skillFormatada = "20868525 - Consorcio Adesao";
+      skillFormatada = "20868525 - Consórcio Adesão";
       break;
     case "20868526":
-      skillFormatada = "20868526 - Consorcio Assembleia";
+      skillFormatada = "20868526 - Consórcio Assembléia";
       break;
     case "20868527":
-      skillFormatada = "20868527 - Consorcio Assuntos G";
+      skillFormatada = "20868527 - Consórcio Assuntos Gerais";
       break;
     case "20868528":
-      skillFormatada = "20868528 - Consorcio Baixa DOC";
+      skillFormatada = "20868528 - Consórcio Baixa DOC";
       break;
     case "20868529":
-      skillFormatada = "20868529 - Consorcio Cadastro";
+      skillFormatada = "20868529 - Consórcio Cadastro";
       break;
     case "20868530":
-      skillFormatada = "20868530 - Consorcio Contemplac";
+      skillFormatada = "20868530 - Consórcio Contemplação";
       break;
     case "20868531":
-      skillFormatada = "20868531 - Consorcio Financeiro";
+      skillFormatada = "20868531 - Consórcio Financeiro";
       break;
     case "20868532":
-      skillFormatada = "20868532 - Consorcio Funchal";
+      skillFormatada = "20868532 - Consórcio Funchal";
       break;
     case "20868533":
-      skillFormatada = "20868533 - Consorcio Retencao";
+      skillFormatada = "20868533 - Consórcio Retenção";
       break;
     case "20868534":
-      skillFormatada = "20868534 - Consorcio Sicoob";
+      skillFormatada = "20868534 - Consórcio Sicoob";
       break;
     case "20868535":
-      skillFormatada = "20868535 - Consorcio Troca Ti";
+      skillFormatada = "20868535 - Consórcio Troca Titularidade";
       break;
   }
 
@@ -130,37 +130,37 @@ function showPopup() {
 
     switch (opTransf) {
       case "20868525":
-        transfSkill = "20868525 - Consorcio Adesao";
+        transfSkill = "20868525 - Consórcio Adesão";
         break;
       case "20868526":
-        transfSkill = "20868526 - Consorcio Assembleia";
+        transfSkill = "20868526 - Consórcio Assembléia";
         break;
       case "20868527":
-        transfSkill = "20868527 - Consorcio Assuntos G";
+        transfSkill = "20868527 - Consórcio Assuntos Gerais";
         break;
       case "20868528":
-        transfSkill = "20868528 - Consorcio Baixa DOC";
+        transfSkill = "20868528 - Consórcio Baixa DOC";
         break;
       case "20868529":
-        transfSkill = "20868529 - Consorcio Cadastro";
+        transfSkill = "20868529 - Consórcio Cadastro";
         break;
       case "20868530":
-        transfSkill = "20868530 - Consorcio Contemplac";
+        transfSkill = "20868530 - Consórcio Contemplação";
         break;
       case "20868531":
-        transfSkill = "20868531 - Consorcio Financeiro";
+        transfSkill = "20868531 - Consórcio Financeiro";
         break;
       case "20868532":
-        transfSkill = "20868532 - Consorcio Funchal";
+        transfSkill = "20868532 - Consórcio Funchal";
         break;
       case "20868533":
-        transfSkill = "20868533 - Consorcio Retencao";
+        transfSkill = "20868533 - Consórcio Retenção";
         break;
       case "20868534":
-        transfSkill = "20868534 - Consorcio Sicoob";
+        transfSkill = "20868534 - Consórcio Sicoob";
         break;
       case "20868535":
-        transfSkill = "20868535 - Consorcio Troca Ti";
+        transfSkill = "20868535 - Consórcio Troca Titularidade";
         break;
     }
 
