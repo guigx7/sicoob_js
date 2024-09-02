@@ -62,9 +62,48 @@ inputs.forEach(input => {
 function showPopup() {
   let opTransf = document.getElementById('ListaTransf').value;
   console.log(opTransf);
-
+  
   if (opTransf != "") {
-    const result = confirm("Realmente deseja transferir para " + opTransf + "?");
+    
+    let transfSkill = "";
+
+    switch(opTransf){
+      case "20868525":
+        transfSkill = "20868525 - Consorcio Adesao";
+        break;
+      case "20868526":
+        transfSkill = "20868526 - Consorcio Assembleia";
+        break;
+      case "20868527":
+        transfSkill = "20868527 - Consorcio Assuntos G";
+        break;
+      case "20868528":
+        transfSkill = "20868528 - Consorcio Baixa DOC";
+        break;
+      case "20868529":
+        transfSkill = "20868529 - Consorcio Cadastro";
+        break;
+      case "20868530":
+        transfSkill = "20868530 - Consorcio Contemplac";
+        break;
+      case "20868531":
+        transfSkill = "20868531 - Consorcio Financeiro";
+        break;
+      case "20868532":
+        transfSkill = "20868532 - Consorcio Funchal";
+        break;
+      case "20868533":
+        transfSkill = "20868533 - Consorcio Retencao";
+        break;
+      case "20868534":
+        transfSkill = "20868534 - Consorcio Sicoob";
+        break;
+      case "20868535":
+        transfSkill = "20868535 - Consorcio Troca Ti";
+        break;
+    }
+
+    const result = confirm("Realmente deseja transferir para " + transfSkill + "?");
     if (result) {
       executarFuncao();
     }
