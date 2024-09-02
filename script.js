@@ -57,6 +57,25 @@ function populateDropdown() {
     });
 }
 
+window.onload = function() {
+  // preencher dropdown
+  populateDropdown();
+
+  // não exibir mesma skill
+  const skillValue = document.getElementById('SkillT').value;
+  const select = document.getElementById('ListaTransf');
+  const options = select.querySelectorAll('option');
+
+  options.forEach(option => {
+      if (option.value === skillValue) {
+          option.style.display = 'none';
+      } else {
+          option.style.display = '';
+      }
+  });
+};
+
+
 // Popup Confirmação Transferência
 function showPopup() {
   let opTransf = document.getElementById('ListaTransf').value;
@@ -125,20 +144,3 @@ document.getElementById("btnPesquisa").addEventListener("click", function() {
   this.value = "pesquisa";
 });
 
-window.onload = function() {
-  // não exibir mesma skill
-  const skillValue = document.getElementById('SkillT').value;
-  const select = document.getElementById('ListaTransf');
-  const options = select.querySelectorAll('option');
-
-  options.forEach(option => {
-      if (option.value === skillValue) {
-          option.style.display = 'none';
-      } else {
-          option.style.display = '';
-      }
-  });
-
-  // preencher dropdown
-  populateDropdown();
-};
