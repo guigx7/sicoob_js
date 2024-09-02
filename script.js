@@ -1,3 +1,4 @@
+// Função de copiar texto ao clicar no botão "Copiar"
 function copyToClipboard(elementId) {
   var copyText = document.getElementById(elementId);
   copyText.select();
@@ -5,6 +6,7 @@ function copyToClipboard(elementId) {
   console.log("Copiado pelo botão: " + copyText.value);
 }
 
+// Função de copiar texto ao clicar no campo
 function copyOnClick(event) {
   var copyText = event.target;
   copyText.select();
@@ -12,6 +14,13 @@ function copyOnClick(event) {
   console.log("Copiado com clique: " + copyText.value);
 }
 
+const inputs = document.querySelectorAll('input[type="text"]'); 
+
+inputs.forEach(input => {
+  input.addEventListener('click', copyOnClick);
+});
+
+// Função de copiar texto ao focar no campo
 function copyOnFocus(elementId) {
   var copyText = document.getElementById(elementId);
   copyText.select();
@@ -19,6 +28,7 @@ function copyOnFocus(elementId) {
   console.log("Copiado com foco: " + copyText.value);
 }
 
+// Função de preencher o dropdown de "Navegação"
 function populateDropdown() {
   console.log(document.getElementById('Caminho').value);
     var caminho = document.getElementById('Caminho').value; 
@@ -50,13 +60,6 @@ function populateDropdown() {
 window.onload = function() {
     populateDropdown();
 }
-
-const inputs = document.querySelectorAll('input[type="text"]'); 
-
-inputs.forEach(input => {
-  input.addEventListener('click', copyOnClick);
-});
-
 
 // Popup Confirmação Transferência
 function showPopup() {
@@ -116,15 +119,27 @@ function showPopup() {
 function executarFuncao() {
   let opTransf = document.getElementById('ListaTransf').value;
   console.log('Função executada!');
-  // alert("Transferido para " + opTransf);
-  // Adicionar logica transferencia.
   document.getElementById('openConfirmation').value = "transf";
 }
 
 document.getElementById('openConfirmation').addEventListener('click', showPopup);
 
-
+// Botão "Pesquisa"
 document.getElementById("btnPesquisa").addEventListener("click", function() {
   this.value = "pesquisa";
 });
 
+// Não exibir própria skill de transferencia
+document.addEventListener('DOMContentLoaded', function() {
+  const skillValue = document.getElementById('SkillT').value;
+  const select = document.getElementById('ListaTransf');
+  const options = select.querySelectorAll('option');
+
+  options.forEach(option => {
+      if (option.value === skillValue) {
+          option.style.display = 'none';
+      } else {
+          option.style.display = '';
+      }
+  });
+});
