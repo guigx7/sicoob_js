@@ -14,7 +14,7 @@ function copyOnClick(event) {
   console.log("Copiado com clique: " + copyText.value);
 }
 
-const inputs = document.querySelectorAll('input[type="text"]'); 
+const inputs = document.querySelectorAll('input[type="text"]');
 
 inputs.forEach(input => {
   input.addEventListener('click', copyOnClick);
@@ -31,33 +31,33 @@ function copyOnFocus(elementId) {
 // Função de preencher o dropdown de "Navegação"
 function populateDropdown() {
   console.log(document.getElementById('Caminho').value);
-    var caminho = document.getElementById('Caminho').value; 
+  var caminho = document.getElementById('Caminho').value;
 
-    var caminhoArray = caminho.split(',');
+  var caminhoArray = caminho.split(',');
 
-    var select = document.getElementById('navegacaoURA');
+  var select = document.getElementById('navegacaoURA');
 
-    select.innerHTML = '';
+  select.innerHTML = '';
 
-    var defaultOption = document.createElement('option');
-    defaultOption.value = "";
-    defaultOption.text = "Navegação:";
-    defaultOption.selected = true;
-    defaultOption.disabled = true;
-    defaultOption.style.color = "#000000"
-    select.appendChild(defaultOption);
+  var defaultOption = document.createElement('option');
+  defaultOption.value = "";
+  defaultOption.text = "Navegação:";
+  defaultOption.selected = true;
+  defaultOption.disabled = true;
+  defaultOption.style.color = "#000000"
+  select.appendChild(defaultOption);
 
-    caminhoArray.forEach(function(item) {
-        var option = document.createElement('option');
-        option.value = item.trim();
-        option.text = item.trim();
-        option.disabled = true;
-        option.style.color = "#000000"
-        select.appendChild(option);
-    });
+  caminhoArray.forEach(function (item) {
+    var option = document.createElement('option');
+    option.value = item.trim();
+    option.text = item.trim();
+    option.disabled = true;
+    option.style.color = "#000000"
+    select.appendChild(option);
+  });
 }
 
-window.onload = function() {
+window.onload = function () {
   // preencher dropdown
   populateDropdown();
 
@@ -67,12 +67,55 @@ window.onload = function() {
   const options = select.querySelectorAll('option');
 
   options.forEach(option => {
-      if (option.value === skillValue) {
-          option.style.display = 'none';
-      } else {
-          option.style.display = '';
-      }
+    if (option.value === skillValue) {
+      option.style.display = 'none';
+    } else {
+      option.style.display = '';
+    }
   });
+
+  //exibir skill de entrada
+  let skillOrigem = document.getElementById('SkillOrigem').value;
+  let skillFormatada = "";
+
+  switch (skillOrigem) {
+    case "20868525":
+      skillFormatada = "20868525 - Consorcio Adesao";
+      break;
+    case "20868526":
+      skillFormatada = "20868526 - Consorcio Assembleia";
+      break;
+    case "20868527":
+      skillFormatada = "20868527 - Consorcio Assuntos G";
+      break;
+    case "20868528":
+      skillFormatada = "20868528 - Consorcio Baixa DOC";
+      break;
+    case "20868529":
+      skillFormatada = "20868529 - Consorcio Cadastro";
+      break;
+    case "20868530":
+      skillFormatada = "20868530 - Consorcio Contemplac";
+      break;
+    case "20868531":
+      skillFormatada = "20868531 - Consorcio Financeiro";
+      break;
+    case "20868532":
+      skillFormatada = "20868532 - Consorcio Funchal";
+      break;
+    case "20868533":
+      skillFormatada = "20868533 - Consorcio Retencao";
+      break;
+    case "20868534":
+      skillFormatada = "20868534 - Consorcio Sicoob";
+      break;
+    case "20868535":
+      skillFormatada = "20868535 - Consorcio Troca Ti";
+      break;
+  }
+
+  document.getElementById('Origem').value = skillFormatada;
+  
 };
 
 
@@ -80,12 +123,12 @@ window.onload = function() {
 function showPopup() {
   let opTransf = document.getElementById('ListaTransf').value;
   console.log(opTransf);
-  
+
   if (opTransf != "") {
-    
+
     let transfSkill = "";
 
-    switch(opTransf){
+    switch (opTransf) {
       case "20868525":
         transfSkill = "20868525 - Consorcio Adesao";
         break;
@@ -140,7 +183,7 @@ function executarFuncao() {
 document.getElementById('openConfirmation').addEventListener('click', showPopup);
 
 // Botão "Pesquisa"
-document.getElementById("btnPesquisa").addEventListener("click", function() {
+document.getElementById("btnPesquisa").addEventListener("click", function () {
   this.value = "pesquisa";
 });
 
