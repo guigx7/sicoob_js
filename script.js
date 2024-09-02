@@ -57,10 +57,6 @@ function populateDropdown() {
     });
 }
 
-window.onload = function() {
-    populateDropdown();
-}
-
 // Popup Confirmação Transferência
 function showPopup() {
   let opTransf = document.getElementById('ListaTransf').value;
@@ -130,6 +126,7 @@ document.getElementById("btnPesquisa").addEventListener("click", function() {
 });
 
 window.onload = function() {
+  // não exibir mesma skill
   const skillValue = document.getElementById('SkillT').value;
   const select = document.getElementById('ListaTransf');
   const options = select.querySelectorAll('option');
@@ -141,4 +138,7 @@ window.onload = function() {
           option.style.display = '';
       }
   });
+
+  // preencher dropdown
+  populateDropdown();
 };
