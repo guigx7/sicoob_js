@@ -118,7 +118,7 @@ window.onload = function () {
   }
 
   document.getElementById('Origem').value = skillFormatada;
-  
+
 };
 
 
@@ -164,6 +164,9 @@ function showPopup() {
         break;
       case "20868535":
         transfSkill = "20868535 - Consórcio Troca Titularidade";
+        break;
+      case "PUC":
+        transfSkill = "URA PUC";
         break;
     }
 
