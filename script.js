@@ -112,6 +112,9 @@ window.onload = function () {
     case "20868535":
       skillFormatada = "20868535 - Consórcio Troca Titularidade";
       break;
+    default:
+      skillFormatada = " ";
+      break;
   }
 
   document.getElementById('Origem').value = skillFormatada;
