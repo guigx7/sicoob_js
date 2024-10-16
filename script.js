@@ -1,9 +1,11 @@
 // Função de copiar texto ao clicar no botão "Copiar"
 function copyToClipboard(elementId) {
   var copyText = document.getElementById(elementId);
-  copyText.select();
-  document.execCommand("copy");
-  console.log("Copiado pelo botão: " + copyText.value);
+  if (copyText) {
+    copyText.select();
+    document.execCommand("copy");
+    console.log("Copiado pelo botão: " + copyText.value);
+  }
 }
 
 // Função de copiar texto ao clicar no campo
@@ -23,104 +25,116 @@ inputs.forEach(input => {
 // Função de copiar texto ao focar no campo
 function copyOnFocus(elementId) {
   var copyText = document.getElementById(elementId);
-  copyText.select();
-  document.execCommand("copy");
-  console.log("Copiado com foco: " + copyText.value);
+  if (copyText) {
+    copyText.select();
+    document.execCommand("copy");
+    console.log("Copiado com foco: " + copyText.value);
+  }
 }
 
 // Função de preencher o dropdown de "Navegação"
 function populateDropdown() {
-  console.log(document.getElementById('Caminho').value);
-  var caminho = document.getElementById('Caminho').value;
+  var caminhoElement = document.getElementById('Caminho');
+  if (caminhoElement) {
+    var caminho = caminhoElement.value;
+    var caminhoArray = caminho.split(',');
+    var select = document.getElementById('navegacaoURA');
 
-  var caminhoArray = caminho.split(',');
+    select.innerHTML = '';
 
-  var select = document.getElementById('navegacaoURA');
+    var defaultOption = document.createElement('option');
+    defaultOption.value = "";
+    defaultOption.text = "Navegação:";
+    defaultOption.selected = true;
+    defaultOption.disabled = true;
+    defaultOption.style.color = "#000000";
+    select.appendChild(defaultOption);
 
-  select.innerHTML = '';
-
-  var defaultOption = document.createElement('option');
-  defaultOption.value = "";
-  defaultOption.text = "Navegação:";
-  defaultOption.selected = true;
-  defaultOption.disabled = true;
-  defaultOption.style.color = "#000000"
-  select.appendChild(defaultOption);
-
-  caminhoArray.forEach(function (item) {
-    var option = document.createElement('option');
-    option.value = item.trim();
-    option.text = item.trim();
-    option.disabled = true;
-    option.style.color = "#000000"
-    select.appendChild(option);
-  });
+    caminhoArray.forEach(function (item) {
+      var option = document.createElement('option');
+      option.value = item.trim();
+      option.text = item.trim();
+      option.disabled = true;
+      option.style.color = "#000000";
+      select.appendChild(option);
+    });
+  }
 }
 
 window.onload = function () {
-  // preencher dropdown
+  // Preencher dropdown
   populateDropdown();
 
-  // não exibir mesma skill
-  const skillValue = document.getElementById('SkillT').value;
+  // Não exibir mesma skill
+  const skillValueElement = document.getElementById('SkillT');
   const select = document.getElementById('ListaTransf');
   const options = select.querySelectorAll('option');
 
-  options.forEach(option => {
-    if (option.value === skillValue) {
-      option.style.display = 'none';
-    } else {
-      option.style.display = '';
-    }
-  });
-
-  //exibir skill de entrada
-  let skillOrigem = document.getElementById('SkillOrigem').value;
-  let skillFormatada = "";
-
-  switch (skillOrigem) {
-    case "20868525":
-      skillFormatada = "20868525 - Consórcio Adesão";
-      break;
-    case "20868526":
-      skillFormatada = "20868526 - Consórcio Assembléia";
-      break;
-    case "20868527":
-      skillFormatada = "20868527 - Consórcio Assuntos Gerais";
-      break;
-    case "20868528":
-      skillFormatada = "20868528 - Consórcio Baixa DOC";
-      break;
-    case "20868529":
-      skillFormatada = "20868529 - Consórcio Cadastro";
-      break;
-    case "20868530":
-      skillFormatada = "20868530 - Consórcio Contemplação";
-      break;
-    case "20868531":
-      skillFormatada = "20868531 - Consórcio Financeiro";
-      break;
-    case "20868532":
-      skillFormatada = "20868532 - Consórcio Funchal";
-      break;
-    case "20868533":
-      skillFormatada = "20868533 - Consórcio Retenção";
-      break;
-    case "20868534":
-      skillFormatada = "20868534 - Consórcio Sicoob";
-      break;
-    case "20868535":
-      skillFormatada = "20868535 - Consórcio Troca Titularidade";
-      break;
-    default:
-      skillFormatada = " ";
-      break;
+  if (skillValueElement) {
+    const skillValue = skillValueElement.value;
+    options.forEach(option => {
+      if (option.value === skillValue) {
+        option.style.display = 'none';
+      } else {
+        option.style.display = '';
+      }
+    });
   }
 
-  document.getElementById('Origem').value = skillFormatada;
+  // Exibir skill de entrada
+  const skillOrigemElement = document.getElementById('SkillOrigem');
+  let skillFormatada = "";
 
+  if (skillOrigemElement) {
+    let skillOrigem = skillOrigemElement.value;
+
+    switch (skillOrigem) {
+      case "20868525":
+        skillFormatada = "20868525 - Consórcio Adesão";
+        break;
+      case "20868526":
+        skillFormatada = "20868526 - Consórcio Assembléia";
+        break;
+      case "20868527":
+        skillFormatada = "20868527 - Consórcio Assuntos Gerais";
+        break;
+      case "20868528":
+        skillFormatada = "20868528 - Consórcio Baixa DOC";
+        break;
+      case "20868529":
+        skillFormatada = "20868529 - Consórcio Cadastro";
+        break;
+      case "20868530":
+        skillFormatada = "20868530 - Consórcio Contemplação";
+        break;
+      case "20868531":
+        skillFormatada = "20868531 - Consórcio Financeiro";
+        break;
+      case "20868532":
+        skillFormatada = "20868532 - Consórcio Funchal";
+        break;
+      case "20868533":
+        skillFormatada = "20868533 - Consórcio Retenção";
+        break;
+      case "20868534":
+        skillFormatada = "20868534 - Consórcio Sicoob";
+        break;
+      case "20868535":
+        skillFormatada = "20868535 - Consórcio Troca Titularidade";
+        break;
+      default:
+        skillFormatada = " ";
+        break;
+    }
+
+    const origemElement = document.getElementById('Origem');
+    if (origemElement) {
+      origemElement.value = skillFormatada;
+    } else {
+      console.warn("Elemento com ID 'Origem' não encontrado.");
+    }
+  }
 };
-
 
 // Popup Confirmação Transferência
 function showPopup() {
@@ -128,7 +142,6 @@ function showPopup() {
   console.log(opTransf);
 
   if (opTransf != "") {
-
     let transfSkill = "";
 
     switch (opTransf) {
@@ -174,8 +187,7 @@ function showPopup() {
     if (result) {
       executarFuncao();
     }
-  }
-  else {
+  } else {
     alert("Nenhuma opção selecionada.");
   }
 }
@@ -192,4 +204,3 @@ document.getElementById('openConfirmation').addEventListener('click', showPopup)
 document.getElementById("btnPesquisa").addEventListener("click", function () {
   this.value = "pesquisa";
 });
-
