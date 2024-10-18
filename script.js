@@ -204,3 +204,41 @@ document.getElementById('openConfirmation').addEventListener('click', showPopup)
 document.getElementById("btnPesquisa").addEventListener("click", function () {
   this.value = "pesquisa";
 });
+
+// Habilitar/desabilitar botões baseado nas seleções
+document.addEventListener('DOMContentLoaded', function() {
+  const selectElementTransf = document.getElementById('ListaTransf');
+  const buttonTransf = document.getElementById('openConfirmation');
+
+  const selectElementMotivo = document.getElementById('MotivoDesc');
+  const buttonMotivo = document.getElementById('btnPesquisa');
+
+  // Iniciar os botões desabilitados
+  buttonTransf.disabled = true;
+  buttonTransf.style.cursor = "not-allowed";
+
+  buttonMotivo.disabled = true;
+  buttonMotivo.style.cursor = "not-allowed";
+
+  // Adicionar evento para habilitar/desabilitar o botão de transferência
+  selectElementTransf.addEventListener('change', function() {
+    if (selectElementTransf.value !== "") {
+      buttonTransf.disabled = false;
+      buttonTransf.style.cursor = "pointer";
+    } else {
+      buttonTransf.disabled = true;
+      buttonTransf.style.cursor = "not-allowed";
+    }
+  });
+
+  // Adicionar evento para habilitar/desabilitar o botão de pesquisa
+  selectElementMotivo.addEventListener('change', function() {
+    if (selectElementMotivo.value !== "") {
+      buttonMotivo.disabled = false;
+      buttonMotivo.style.cursor = "pointer";
+    } else {
+      buttonMotivo.disabled = true;
+      buttonMotivo.style.cursor = "not-allowed";
+    }
+  });
+});
