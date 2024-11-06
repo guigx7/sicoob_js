@@ -225,3 +225,46 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+
+// Opções para o select
+const allOptions = [
+  { value: "", text: "Lista de Transferência:" },
+  { value: "20868525", text: "20868525 - Consórcio Adesão" },
+  { value: "20868526", text: "20868526 - Consórcio Assembleia" },
+  { value: "20868527", text: "20868527 - Consórcio Assuntos Gerais" },
+  { value: "20868528", text: "20868528 - Consórcio Baixa DOC" },
+  { value: "20868529", text: "20868529 - Consórcio Cadastro" },
+  { value: "20868530", text: "20868530 - Consórcio Contemplação" },
+  { value: "20868531", text: "20868531 - Consórcio Financeiro" },
+  { value: "20868532", text: "20868532 - Consórcio Funchal" },
+  { value: "20868533", text: "20868533 - Consórcio Retencao" },
+  { value: "20868534", text: "20868534 - Consórcio Transferência" }, // Será exibida apenas para "Consórcio Contemplação"
+  { value: "20868535", text: "20868535 - Consórcio Troca Titularidade" },
+  { value: "PUC", text: "URA PUC" }
+];
+
+// Opções para "Consórcio Contemplação" (apenas Transferência e URA PUC)
+const contemplationOptions = [
+  { value: "20868534", text: "20868534 - Consórcio Transferência" },
+  { value: "PUC", text: "URA PUC" }
+];
+
+// Obter o valor do input SkillT
+const skillValue = document.getElementById("SkillT").value;
+
+// Obter o select
+const select = document.getElementById("ListaTransf");
+
+// Escolher as opções com base na skill
+const optionsToShow = skillValue === "20868530"
+  ? contemplationOptions
+  : allOptions.filter(option => option.value !== "20868534" && option.value !== skillValue);
+
+// Adicionar as opções ao select
+optionsToShow.forEach(option => {
+  const opt = document.createElement("option");
+  opt.value = option.value;
+  opt.textContent = option.text;
+  select.appendChild(opt);
+});
