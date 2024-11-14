@@ -221,6 +221,9 @@ const skillValue = document.getElementById("SkillT").value;
 // Obter o select
 const select = document.getElementById("ListaTransf");
 
+// Limpar o select para evitar duplicação
+select.innerHTML = "";
+
 // Filtrar as opções para remover a que está em skillValue
 const optionsToShow = allOptions.filter(option => option.value !== skillValue);
 
