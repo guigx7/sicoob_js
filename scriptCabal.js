@@ -212,7 +212,8 @@ const allOptions = [
   { value: "20868799", text: "20868799 - Adq Cabal Portal" },
   { value: "20868801", text: "20868801 - Adq Cabal Financeiro" },
   { value: "20868802", text: "20868802 - Adq Cabal Retencao" },
-  { value: "20868803", text: "20868803 - Adq Cabal Suporte Tecnico" }
+  { value: "20868803", text: "20868803 - Adq Cabal Suporte Tecnico" },
+  { value: "PUC", text: "URA PUC" }
 ];
 
 // Obter o valor do input SkillT
