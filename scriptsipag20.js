@@ -89,9 +89,6 @@ window.onload = function () {
     let skillOrigem = skillOrigemElement.value;
 
     switch (skillOrigem) {
-      case "23120879":
-        skillFormatada = "23120879 - Sipag 2.0 Suporte Tecnico Cooperado";
-        break;
       case "23120880":
         skillFormatada = "23120880 - Sipag 2.0 App";
         break;
@@ -142,9 +139,6 @@ function showPopup() {
     let transfSkill = "";
 
     switch (opTransf) {
-      case "23120879":
-        transfSkill = "23120879 - Sipag 2.0 Suporte Tecnico Cooperado";
-        break;
       case "23120880":
         transfSkill = "23120880 - Sipag 2.0 App";
         break;
@@ -224,7 +218,6 @@ document.addEventListener('DOMContentLoaded', function() {
 // Opções para o select
 const allOptions = [
   { value: "", text: "Lista de Transferência:" },
-  { value: "23120879", text: "23120879 - Sipag 2.0 Suporte Tecnico Cooperado" },
   { value: "23120880", text: "23120880 - Sipag 2.0 App" },
   { value: "23120881", text: "23120881 - Sipag 2.0 Atendente" },
   { value: "23120882", text: "23120882 - Sipag 2.0 Cadastro" },
