@@ -202,7 +202,9 @@ document.getElementById('openConfirmation').addEventListener('click', showPopup)
 
 // Botão "Pesquisa"
 document.getElementById("btnPesquisa").addEventListener("click", function () {
+  console.log('BOTAO PESQUISA');
   this.value = "pesquisa";
+  console.log('ACIONADO');
 });
 
 // Habilitar/desabilitar botão baseado na seleção
