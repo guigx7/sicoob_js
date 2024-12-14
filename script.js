@@ -20,9 +20,11 @@ function copyOnClick(event) {
 
 const inputs = document.querySelectorAll('input[type="text"]');
 
+/*
 inputs.forEach(input => {
   input.addEventListener('click', copyOnClick);
 });
+*/
 
 // Função de copiar texto ao focar no campo
 function copyOnFocus(elementId) {
