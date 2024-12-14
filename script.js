@@ -9,12 +9,14 @@ function copyToClipboard(elementId) {
 }
 
 // Função de copiar texto ao clicar no campo
+/*
 function copyOnClick(event) {
   var copyText = event.target;
   copyText.select();
   document.execCommand("copy");
   console.log("Copiado com clique: " + copyText.value);
 }
+*/
 
 const inputs = document.querySelectorAll('input[type="text"]');
 
