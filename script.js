@@ -254,6 +254,8 @@ const allOptions = [
 const contemplationOptions = [
   { value: " ", text: "Lista de Transferência:" },
   { value: "20868534", text: "20868534 - Consórcio Transferência" },
+  { value: "20868532", text: "20868532 - Consórcio Funchal" },
+  { value: "20868533", text: "20868533 - Consórcio Retencao" },
   { value: "PUC", text: "URA PUC" }
 ];
 
