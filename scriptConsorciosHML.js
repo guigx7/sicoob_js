@@ -284,11 +284,18 @@ const skillValue = document.getElementById("SkillT").value;
 const select = document.getElementById("ListaTransf");
 
 // Escolher as opções com base na skill
-const optionsToShow = skillValue === "25166399"
-  ? recebimentoCreditoOptions // Exibe apenas URA PUC para "Consórcio Recebimento de Crédito"
-  : skillValue === "20868530"
-    ? contemplationOptions // Exibe apenas Transferência e URA PUC para "Consórcio Contemplação"
-    : allOptions.filter(option => option.value !== "20868534" && option.value !== skillValue); // Exclui "Consórcio Transferência" e a skill atual
+let optionsToShow;
+
+if (skillValue === "25166399") {
+  // Exibe apenas URA PUC para "Consórcio Recebimento de Crédito"
+  optionsToShow = recebimentoCreditoOptions;
+} else if (skillValue === "20868530") {
+  // Exibe apenas Transferência e URA PUC para "Consórcio Contemplação"
+  optionsToShow = contemplationOptions;
+} else {
+  // Exclui "Consórcio Transferência" e a skill atual para outras skills
+  optionsToShow = allOptions.filter(option => option.value !== "20868534" && option.value !== skillValue);
+}
 
 // Adicionar as opções ao select
 select.innerHTML = ''; // Limpa as opções existentes antes de adicionar novas
