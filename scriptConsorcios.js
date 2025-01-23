@@ -249,6 +249,7 @@ document.addEventListener('DOMContentLoaded', function() {
 const contemplationOptions = [
   { value: " ", text: "Lista de Transferência:" },
   { value: "20868534", text: "20868534 - Consórcio Transferência" },
+  { value: "20868532", text: "20868532 - Consórcio Funchal" },
   { value: "PUC", text: "URA PUC" }
 ];
 
