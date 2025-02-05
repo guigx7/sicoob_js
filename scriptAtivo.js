@@ -1,21 +1,15 @@
-// Função de copiar texto ao clicar no botão "Copiar"
+// Funções de cópia
 function copyToClipboard(elementId) {
   const copyText = document.getElementById(elementId);
   if (copyText) {
     copyText.select();
     document.execCommand("copy");
-    console.log("Copiado pelo botão: " + copyText.value);
+    console.log(`Copiado: ${copyText.value}`);
   }
 }
 
-// Função de copiar texto ao focar no campo
 function copyOnFocus(elementId) {
-  const copyText = document.getElementById(elementId);
-  if (copyText) {
-    copyText.select();
-    document.execCommand("copy");
-    console.log("Copiado com foco: " + copyText.value);
-  }
+  copyToClipboard(elementId);
 }
 
 // Função auxiliar para criar opções
@@ -29,7 +23,7 @@ function createOption(value, text) {
 // Preencher select de Produto 
 function populateProduto() {
   const select = document.getElementById('Produto');
-  select.innerHTML = ''; 
+  select.innerHTML = '';
 
   select.appendChild(createOption('SelecioneOpcao', 'Selecione uma Opção'));
   select.appendChild(createOption('Cartao', 'Cartão'));
@@ -46,7 +40,7 @@ function populateProduto() {
 // Preencher select de Assunto
 function populateAssunto() {
   const select = document.getElementById('Assunto');
-  select.innerHTML = ''; 
+  select.innerHTML = '';
   
   select.appendChild(createOption('Selecione uma Opção', 'Selecione uma Opção'));
 }
@@ -76,10 +70,10 @@ window.onload = function () {
     
     origemElement.value = skillFormatada;
   }
-};
 
-// Configuração do Botão Pesquisa
-document.getElementById("btnFinalizar").addEventListener("click", function () {
-  this.value = "finalizar";
-  console.log("valor:" + this.value);
-});
+  // Configuração do Botão Finalizar 
+  document.getElementById("btnFinalizar").addEventListener("click", function () {
+    this.value = "finalizar";
+    console.log("valor:" + this.value);
+  });
+};
