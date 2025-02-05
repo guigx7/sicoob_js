@@ -80,6 +80,6 @@ window.onload = function () {
 
 // Configuração do Botão Pesquisa
 document.getElementById("btnFinalizar").addEventListener("click", function () {
-  this.value = "pesquisa";
+  this.value = "finalizar";
   console.log("valor:" + this.value);
 });
