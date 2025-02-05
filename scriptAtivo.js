@@ -49,10 +49,6 @@ function populateAssunto() {
   select.innerHTML = ''; 
   
   select.appendChild(createOption('Selecione uma Opção', 'Selecione uma Opção'));
-  select.appendChild(createOption('ContatoResponsavel', 'Contato com o Responsável'));
-  select.appendChild(createOption('Engano', 'Engano'));
-  select.appendChild(createOption('NaoIncomodar', 'Não Incomodar'));
-  select.appendChild(createOption('Terceiro', 'Terceiro'));
 }
 
 window.onload = function () {
@@ -83,6 +79,7 @@ window.onload = function () {
 };
 
 // Configuração do Botão Pesquisa
-document.getElementById("btnPesquisa").addEventListener("click", function () {
+document.getElementById("btnFinalizar").addEventListener("click", function () {
   this.value = "pesquisa";
+  console.log("valor:" + this.value);
 });
