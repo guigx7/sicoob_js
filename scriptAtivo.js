@@ -76,4 +76,10 @@ window.onload = function () {
     this.value = "finalizar";
     console.log("valor:" + this.value);
   });
+
+  // Configuração do Botão Consultar 
+  document.getElementById("btnConsultar").addEventListener("click", function () {
+    this.value = "consultar";
+    console.log("valor:" + this.value);
+  });
 };
