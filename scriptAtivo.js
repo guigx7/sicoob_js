@@ -45,9 +45,34 @@ function populateAssunto() {
   select.appendChild(createOption('Selecione uma Opção', 'Selecione uma Opção'));
 }
 
+// Processar dados da API diretamente
+function processarDadosAPI() {
+  const resInput = document.getElementById('Res');
+  
+  if(resInput && resInput.value) {
+    const resultData = JSON.parse(resInput.value); // Remove o split anterior
+
+    if(resultData.content?.length > 0) {
+      const conta = resultData.content[0].account;
+      
+      // Exibir dados (exemplo)
+      console.log('Dados da conta:', {
+        cooperativa: conta.numeroCoperativa,
+        contaCorrente: conta.numContaCorrente,
+        instituicao: conta.institution.name
+      });
+
+      // Preencher campos na página (exemplo)
+      document.getElementById('Cooperativa').value = conta.numeroCoperativa;
+      document.getElementById('ContaCorrente').value = conta.numContaCorrente;
+    }
+  }
+}
+
 window.onload = function () {
   populateProduto();
   populateAssunto();
+  processarDadosAPI(); // Chama a nova função
 
   // Configuração da Skill de Origem
   const skillOrigemElement = document.getElementById('SkillOrigem');
