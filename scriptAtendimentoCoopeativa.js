@@ -258,7 +258,7 @@ function confirmTransfer() {
 
 // Inicialização
 window.onload = function () {
-  populateNavigation();
+  // populateNavigation();
   setupTransfers();
   showOriginSkill();
   handleTransfer();
