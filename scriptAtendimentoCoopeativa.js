@@ -266,8 +266,8 @@ window.onload = function () {
   document
     .getElementById("openConfirmation")
     .addEventListener("click", confirmTransfer);
-  document.getElementById("btnPesquisa").addEventListener("click", function () {
-    this.value = "pesquisa";
-    console.log("Botão pesquisa acionado");
+  document.getElementById("btnFinalizar").addEventListener("click", function () {
+    this.value = "finalizar";
+    console.log("Botão finalizar acionado");
   });
 };
