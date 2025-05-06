@@ -258,6 +258,7 @@ function populateNavigation() {
 
 function confirmRecording() {
   document.getElementById("recordingModal").style.display = "none";
+  document.getElementById("overlay").style.display = "none";
 }
 
 // Inicialização
@@ -267,6 +268,7 @@ window.onload = function () {
   showOriginSkill();
   handleTransfer();
   document.getElementById("recordingModal").style.display = "block";
+  document.getElementById("overlay").style.display = "block";
   document
     .getElementById("openConfirmation")
     .addEventListener("click", confirmTransfer);
