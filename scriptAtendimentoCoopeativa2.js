@@ -96,6 +96,7 @@ const skillConfig = {
     29221005: "Solicitacao Fundo",
     29221006: "Transacao de Cartoes",
     29221009: "Transferencia Internacional",
+    "AC": "URA Atendimento a Cooperativas",
   },
 
   transferOptions: {
