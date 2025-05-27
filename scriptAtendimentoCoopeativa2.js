@@ -96,7 +96,7 @@ const skillConfig = {
     29221005: "Solicitacao Fundo",
     29221006: "Transacao de Cartoes",
     29221009: "Transferencia Internacional",
-    "AC": "URA Atendimento a Cooperativas",
+    "AC": "URA Atendimento à Cooperativas",
   },
 
   transferOptions: {
@@ -174,7 +174,7 @@ const skillConfig = {
       { value: "29221005", text: "Solicitacao Fundo" },
       { value: "29221006", text: "Transacao de Cartoes" },
       { value: "29221009", text: "Transferencia Internacional" },
-      { value: "AC", text: "URA Atendimento a Cooperativas" },
+      { value: "AC", text: "URA Atendimento à Cooperativas" },
     ],
   },
 };
