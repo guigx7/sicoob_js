@@ -97,6 +97,10 @@ const skillConfig = {
     29221006: "Transacao de Cartoes",
     29221009: "Transferencia Internacional",
     "AC": "URA Atendimento à Cooperativas",
+    31507625: "2. SUPER: SANDRA DA CRUZ", 
+    31507628: "2. SUPER: CAROLYNA M. S. PRUDES", 
+    31507627: "2. SUPER: JOÃO MARTINS B. NETO", 
+    31507626: "2. SUPER: LUCIANA SOARES LIMA", 
   },
 
   transferOptions: {
@@ -175,6 +179,10 @@ const skillConfig = {
       { value: "29221006", text: "Transacao de Cartoes" },
       { value: "29221009", text: "Transferencia Internacional" },
       { value: "AC", text: "URA Atendimento à Cooperativas" },
+      { value: "31507625", text: "2. SUPER: SANDRA DA CRUZ" },
+      { value: "31507628", text: "2. SUPER: CAROLYNA M. S. PRUDES" },
+      { value: "31507627", text: "2. SUPER: JOÃO MARTINS B. NETO" },
+      { value: "31507626", text: "2. SUPER: LUCIANA SOARES LIMA" },
     ],
   },
 };
