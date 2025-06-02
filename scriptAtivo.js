@@ -86,7 +86,11 @@ window.onload = function () {
       "20868799": "Adq Cabal Portal",
       "20868801": "Adq Cabal Financeiro",
       "20868802": "Adq Cabal Retencao",
-      "20868803": "Adq Cabal Suporte Tecnico"
+      "20868803": "Adq Cabal Suporte Tecnico",
+      "31507625": "2. SUPER: SANDRA DA CRUZ", 
+      "31507628": "2. SUPER: CAROLYNA M. S. PRUDES", 
+      "31507627": "2. SUPER: JOÃO MARTINS B. NETO", 
+      "31507626": "2. SUPER: LUCIANA SOARES LIMA", 
     };
 
     const skillFormatada = skillMap[skillOrigemElement.value] 
